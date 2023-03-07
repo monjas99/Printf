@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 #include "ft_printf.h"
 
-static void	ft_write(int number, char *base, int i, int *r)
+static void	ft_write(unsigned long long number, char *base, int i, int *r)
 {
 	if (number > 0)
 	{
@@ -21,7 +21,7 @@ static void	ft_write(int number, char *base, int i, int *r)
 	}
 }
 
-int	ft_putnbr_base(int number, char *base)
+int	ft_putnbr_base_void(unsigned long long number, char *base)
 {
 	int	i;
 	int	r;
@@ -39,7 +39,7 @@ int	ft_putnbr_base(int number, char *base)
 		write (1, &base[number % i], 1);
 	}
 	if (number < 0)
-		ft_putnbr_base(number * -1, base);
+		ft_putnbr_base_void(number * -1, base);
 	ft_write(number, base, i, &r);
 	return (r);
 }

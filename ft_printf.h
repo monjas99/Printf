@@ -23,6 +23,8 @@ int		ft_printf(const char *str, ...);
 int		ft_putchar(char c);
 int		ft_putstr(char *c);
 int		ft_putnbr_itoa(va_list a);
-size_t	ft_strlen(const char *c);
+int		ft_putnbr_base(int number, char *base);
+int		ft_putnbr_base_void(unsigned long long number, char *base);
+size_t		ft_strlen(const char *c);
 
 #endif

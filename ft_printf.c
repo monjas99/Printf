@@ -23,12 +23,15 @@ void	ft_flags(va_list a, int *r, char c)
 		r += ft_putnbr_itoa(a);
 //	else if (c == 'u')
 //
-//	else if (c == 'p')
-//
-//	else if (c == 'x')
-//
-//	else if (c == 'X')
-//
+	else if (c == 'p')
+	{	
+		r += ft_putstr("0x");	
+		r += ft_putnbr_base_void(va_arg(a, unsigned long), "0123456789abcdef");
+	}
+	else if (c == 'x')
+		r += ft_putnbr_base(va_arg(a, int), "0123456789abcdef");
+	else if (c == 'X')
+		r += ft_putnbr_base(va_arg(a, int), "0123456789ABCDEF");
 	else if (c == '%')
 		r += ft_putchar('%');
 }

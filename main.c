@@ -16,8 +16,9 @@ int main(void)
 {
 	char	c = 's';
 	char	*s = "String de prueba";
-	int		i = 0;
-	int		j = 123456789;
+	int	i = 0;
+	int	j = 84365;
+	void	*v = "adios";
 
 	ft_printf("Imprime un caracter: %c", c);
 	printf("\n");
@@ -29,6 +30,11 @@ int main(void)
 	printf("\n");
 	ft_printf("Imprime un porciento: %%");
 	printf("\n");
-	printf("%x", i);
+	ft_printf("Imprime un numero en base hexadecimal: %x", j);
+	printf("\n");
+	ft_printf("Imprime una hexadecimal en mayusculas: %X", j);
+	printf("\n");
+	ft_printf("Imprime un: %p", v);
+	printf("\n");
 	return (0);
 }
