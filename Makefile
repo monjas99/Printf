@@ -5,7 +5,7 @@ cc = gcc
 CFLAGS = -Wall -Wextra -Werror
 
 NAME = printf.a
-SRC = printf.c
+SRC = printf.c ft_putchar.c ft_putstr.c ft_putnbr.c ft_strlen.c
 OBJ = $(SRC:.=.o)
 
 all: $(NAME)

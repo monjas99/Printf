@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmonjas- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/06 16:14:00 by dmonjas-          #+#    #+#             */
-/*   Updated: 2023/03/07 11:08:22 by dmonjas-         ###   ########.fr       */
+/*   Created: 2023/03/07 10:39:06 by dmonjas-          #+#    #+#             */
+/*   Updated: 2023/03/07 11:08:41 by dmonjas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdarg.h>
-# include <unistd.h>
-# include <string.h>
-# include <stdlib.h>
-# include <stdio.h>
+int main(void)
+{
+	char	c = 's';
+	char	*s = "String de prueba";
+	int		i = 1;
+	int		j = 123456789;
 
-int		ft_printf(const char *str, ...);
-int		ft_putchar(char c);
-int		ft_putstr(char *c);
-int		ft_putnbr_itoa(va_list a);
-size_t	ft_strlen(const char *c);
-
-#endif
+	ft_printf("Imprime un caracter: %c", c);
+	printf("\n");
+	ft_printf("Imprime un strig: %s", s);
+	printf("\n");
+	ft_printf("Imprime un numero: %i", i);
+	printf("\n");
+	ft_printf("Imprime una cadena de numeros: %d", j);
+	return (0);
+}
