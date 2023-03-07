@@ -6,7 +6,7 @@
 /*   By: dmonjas- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 16:16:06 by dmonjas-          #+#    #+#             */
-/*   Updated: 2023/03/07 11:02:00 by dmonjas-         ###   ########.fr       */
+/*   Updated: 2023/03/07 11:18:32 by dmonjas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,16 @@ void	ft_flags(va_list a, int *r, char c)
 		r += ft_putstr(va_arg(a, char *));
 	else if (c == 'd' || c == 'i')
 		r += ft_putnbr_itoa(a);
-
+//	else if (c == 'u')
+//
+//	else if (c == 'p')
+//
+//	else if (c == 'x')
+//
+//	else if (c == 'X')
+//
+	else if (c == '%')
+		r += ft_putchar('%');
 }
 
 int	ft_printf(const char *str, ...)
