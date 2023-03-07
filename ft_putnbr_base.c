@@ -1,34 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmonjas- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/07 10:39:06 by dmonjas-          #+#    #+#             */
-/*   Updated: 2023/03/07 12:52:49 by dmonjas-         ###   ########.fr       */
+/*   Created: 2023/03/07 12:56:40 by dmonjas-          #+#    #+#             */
+/*   Updated: 2023/03/07 13:10:17 by dmonjas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int main(void)
+int	ft_putnbr_base(int number, char *base)
 {
-	char	c = 's';
-	char	*s = "String de prueba";
-	int		i = 0;
-	int		j = 123456789;
+	int	i;
+	int	j;
 
-	ft_printf("Imprime un caracter: %c", c);
-	printf("\n");
-	ft_printf("Imprime un strig: %s", s);
-	printf("\n");
-	ft_printf("Imprime un numero: %i", i);
-	printf("\n");
-	ft_printf("Imprime una cadena de numeros: %d", j);
-	printf("\n");
-	ft_printf("Imprime un porciento: %%");
-	printf("\n");
-	printf("%x", i);
-	return (0);
+	i = 0;
+	j = 0;
+	while (base[i])
+	{
+		if (base[i] == '+' || base[i] == '-')
+			return (NULL);
+		i++;
+	}
+	if (number == 0)
+	{
+		write (1, base[number % i], 1);
+	}
+	/*
+	 * if
+	 * number < 0
+	 *else 
+	 Fucnion aparte recursiva con el write
+*/
+	return (i);
 }
