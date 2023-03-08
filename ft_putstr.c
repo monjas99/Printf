@@ -6,7 +6,7 @@
 /*   By: dmonjas- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 10:47:03 by dmonjas-          #+#    #+#             */
-/*   Updated: 2023/03/07 10:47:05 by dmonjas-         ###   ########.fr       */
+/*   Updated: 2023/03/08 13:23:02 by dmonjas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int	ft_putstr(char *s)
 	int	i;
 
 	i = 0;
+	if (s == NULL)
+		return (write(1, "(null)", 6));
 	while (s[i])
 		write(1, &s[i++], 1);
 	return (i);
