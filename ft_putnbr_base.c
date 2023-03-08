@@ -6,12 +6,12 @@
 /*   By: dmonjas- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 12:56:40 by dmonjas-          #+#    #+#             */
-/*   Updated: 2023/03/07 13:10:17 by dmonjas-         ###   ########.fr       */
+/*   Updated: 2023/03/08 12:00:04 by dmonjas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
 
-static void	ft_write(int number, char *base, int i, int *r)
+static void	ft_write(unsigned int number, char *base, int i, int *r)
 {
 	if (number > 0)
 	{
@@ -23,11 +23,13 @@ static void	ft_write(int number, char *base, int i, int *r)
 
 int	ft_putnbr_base(int number, char *base)
 {
-	int	i;
-	int	r;
+	int				i;
+	int				r;
+	unsigned int	nbr;
 
 	i = 0;
 	r = 0;
+	nbr = (number + UINT_MAX + 1);
 	while (base[i])
 	{
 		if (base[i] == '+' || base[i] == '-')
@@ -37,9 +39,8 @@ int	ft_putnbr_base(int number, char *base)
 	if (number == 0)
 	{
 		write (1, &base[number % i], 1);
+		return (1);
 	}
-	if (number < 0)
-		ft_putnbr_base(number * -1, base);
 	ft_write(number, base, i, &r);
 	return (r);
 }

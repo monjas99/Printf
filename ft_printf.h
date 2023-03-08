@@ -6,7 +6,7 @@
 /*   By: dmonjas- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 16:14:00 by dmonjas-          #+#    #+#             */
-/*   Updated: 2023/03/07 11:08:22 by dmonjas-         ###   ########.fr       */
+/*   Updated: 2023/03/08 12:00:29 by dmonjas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FT_PRINTF_H
 
 # include <stdarg.h>
+# include <limit.h>
 # include <unistd.h>
 # include <string.h>
 # include <stdlib.h>

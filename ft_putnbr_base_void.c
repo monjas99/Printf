@@ -6,7 +6,7 @@
 /*   By: dmonjas- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 12:56:40 by dmonjas-          #+#    #+#             */
-/*   Updated: 2023/03/07 13:10:17 by dmonjas-         ###   ########.fr       */
+/*   Updated: 2023/03/08 11:58:44 by dmonjas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
@@ -37,9 +37,8 @@ int	ft_putnbr_base_void(unsigned long long number, char *base)
 	if (number == 0)
 	{
 		write (1, &base[number % i], 1);
+		return (1);
 	}
-	if (number < 0)
-		ft_putnbr_base_void(number * -1, base);
 	ft_write(number, base, i, &r);
 	return (r);
 }

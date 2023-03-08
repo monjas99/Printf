@@ -6,7 +6,7 @@
 /*   By: dmonjas- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 16:16:06 by dmonjas-          #+#    #+#             */
-/*   Updated: 2023/03/07 11:18:32 by dmonjas-         ###   ########.fr       */
+/*   Updated: 2023/03/08 11:58:06 by dmonjas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ void	ft_flags(va_list a, int *r, char c)
 		r += ft_putstr(va_arg(a, char *));
 	else if (c == 'd' || c == 'i')
 		r += ft_putnbr_itoa(a);
-//	else if (c == 'u')
-//
+	else if (c == 'u')
+		r += ft_putnbr_base(av_arg(a, int), "0123456789");
 	else if (c == 'p')
 	{	
 		r += ft_putstr("0x");	
